@@ -1,0 +1,96 @@
+
+
+
+
+#How a loop works 
+honor_roll_names = []
+honor_roll_scores = []
+
+index_person = 0
+score = test_scores[0]
+name =  student_names[0]
+if score >= 90:
+    honor_roll_scores.append(score)
+    honor_roll_names.append(name)
+
+index_person = 1
+score = test_scores[1]
+name =  student_names[1]
+if score >= 90:
+    honor_roll_scores.append(score)
+    honor_roll_names.append(name)    
+
+index_person = 2
+score = test_scores[index_person]
+name =  student_names[index_person]
+if score >= 90:
+    honor_roll_scores.append(score)
+    honor_roll_names.append(name) 
+
+#diffrent method for creating assignment 4 loop
+    n = len(student_names)
+n
+list(range(n))
+
+
+honor_roll_names = []
+honor_roll_scores = []
+
+n = len(student_names)
+
+for index_person in list(range(n)):
+    score = test_scores[index_person]
+    name  =  student_names[index_person]
+    if score >= 90:
+        honor_roll_scores.append(score)
+        honor_roll_names.append(name)
+
+print(honor_roll_scores)
+print(honor_roll_names)
+
+# version 2
+honor_roll_names = []
+honor_roll_scores = []
+
+n = len(student_names)
+
+for score,name in zip(test_scores,student_names):
+    if score >= 90:
+        honor_roll_scores.append(score)
+        honor_roll_names.append(name)
+
+print(honor_roll_scores)
+print(honor_roll_names)
+
+#version 3 
+honor_roll_names = []
+honor_roll_scores = []
+
+list_indeces = [0,1,2,3,4,5,6,7,8,9]
+
+for index_person in list_indeces:
+    score = test_scores[index_person]
+    name  =  student_names[index_person]
+    if score >= 90:
+        honor_roll_scores.append(score)
+        honor_roll_names.append(name)
+
+print(honor_roll_scores)
+print(honor_roll_names)
+
+#for the grades 
+n = len(grades1)
+n
+list(range(n))
+#chnage to index??
+ 
+for i in [0,1,2,3,4]:
+    # Access data for person "i"
+    name   = student_names[i]
+    grade1 = grades1_list[i]
+    grade2 = grades2_list[i]
+    grade3 = grades3_list[i]
+
+    # Solution:
+    grade_mean = np.mean([grade1,grade2,grade3])
+    print(name + "'s "+ "average grade:" + " " + str(grade_mean))
