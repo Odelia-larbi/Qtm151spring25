@@ -36,6 +36,7 @@ panel on the left:
 
 Delete existing table
 -- SQLBook: Code
+-- Active: 1744743804477@@127.0.0.1@5432@odelia@public
 -- Active: 1710903290079@@127.0.0.1@5432@postgres
 -- If the table already exists we can drop it:
 -- If it doesn't exist nothing happens
@@ -100,6 +101,7 @@ Try it yourself!
 -- Select a new driver id (needs to be unique)
 -- Make sure to deparate arguments by a semicolon!
 
+INSERT INTO drivers  VALUES (151, 'Odelia Larbi-Amoah', 'Ghanian',10000);
 
 
 
@@ -111,7 +113,7 @@ Try it yourself!
 
 Extracting columns from table
 -- SQLBook: Code
--- SELECT extracts certain COLUMNS
+-- SELECT extracts certain COLUMNS basically like the double brackets in python 
 -- FROM is used to indicate the source table
 
 SELECT driver_id, nationality FROM drivers;
@@ -133,7 +135,7 @@ WHERE nationality = 'German';
 
 -- Evalute OR conditions
 SELECT * FROM drivers
-WHERE (nationality = 'Colombian') OR (nationality = 'German');
+WHERE (nationality = 'Ghanian') OR (nationality = 'German');
 
 -- Evaluate AND conditions
 SELECT * FROM drivers
@@ -188,6 +190,7 @@ Try it yourself!
 with more than 60 victories
 -- SQLBook: Code
 -- Write your own code!
+SELECT * FROM nationality
 
 
 
